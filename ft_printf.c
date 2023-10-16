@@ -6,7 +6,7 @@
 /*   By: lvichi <lvichi@student.42porto.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:35:10 by lvichi            #+#    #+#             */
-/*   Updated: 2023/10/16 20:58:50 by lvichi           ###   ########.fr       */
+/*   Updated: 2023/10/16 21:16:33 by lvichi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ static int	ft_check_format(char *format, va_list ap)
 		return (ft_print_i(va_arg(ap, int)));
 	if (*format == 'u')
 		return (ft_print_u(va_arg(ap, unsigned int)));
+	if (*format == 'x')
+		return (ft_print_x(va_arg(ap, unsigned int), "0123456789abcdef"));
+	if (*format == 'X')
+		return (ft_print_x(va_arg(ap, unsigned int), "0123456789ABCDEF"));
+	if (*format == '%')
+		return (write(1, "%", 1));
 	return (0);
 }
 
