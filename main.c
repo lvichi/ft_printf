@@ -6,7 +6,7 @@
 /*   By: lvichi <lvichi@student.42porto.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:05:10 by lvichi            #+#    #+#             */
-/*   Updated: 2023/10/15 18:52:38 by lvichi           ###   ########.fr       */
+/*   Updated: 2023/10/16 17:11:01 by lvichi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 int	main(void)
 {
-	ft_printf("Print this!\n");
-	printf("Print this!\n");
+	int i, t;
+	
+	i = ft_printf("Print this: %c and this: %s !!\n", 'x', "super");
+	t = printf("Print this: %c and this: %s !!\n", 'x', "super");
+	printf("ft_printf: %d\nprintf: %d\n", i, t);
 }
