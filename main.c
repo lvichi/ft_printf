@@ -6,14 +6,14 @@
 /*   By: lvichi <lvichi@student.42porto.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:05:10 by lvichi            #+#    #+#             */
-/*   Updated: 2023/10/16 21:09:48 by lvichi           ###   ########.fr       */
+/*   Updated: 2023/10/16 21:24:39 by lvichi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	main(void)
+/*int	main(void)
 {
 	int 			i, t, x, y;
 	unsigned int	u;
@@ -31,4 +31,16 @@ int	main(void)
 	i = ft_printf("Print x: %x X: %X %% !!\n", x, y);
 	t = printf("Print x: %x X: %X %% !!\n", x, y);
 	printf("ft_printf: %d\nprintf: %d\n", i, t);
+}*/
+
+int	main(void)
+{
+	int	i;
+	int	x;
+	
+	i = ft_printf("%c", '0');
+	printf("\n");
+	x = printf("%c", '0');
+	printf("\n");
+	printf("ft_printf: %d\nprintf: %d\n\n", i, x);
 }

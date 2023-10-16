@@ -6,7 +6,7 @@
 /*   By: lvichi <lvichi@student.42porto.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:35:10 by lvichi            #+#    #+#             */
-/*   Updated: 2023/10/16 21:16:33 by lvichi           ###   ########.fr       */
+/*   Updated: 2023/10/16 21:43:01 by lvichi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static int	ft_check_format(char *format, va_list ap)
 {
-	if (*format == 'c')
+	if (format[1] == 'c')
 		return (ft_print_c(va_arg(ap, int)));
 	if (*format == 's')
 		return (ft_print_s(va_arg(ap, char *)));
@@ -45,9 +45,12 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	while (format[i])
 	{
-		if (format[i] == '%' && i++)
+		if (format[i] == '%')
+		{
 			size += ft_check_format(&((char *)format)[i++], ap);
-		write(1, &format[i++], 1);
+			i++;
+		}
+		write(1, &format[i], 1);
 		size++;
 	}
 	va_end(ap);
