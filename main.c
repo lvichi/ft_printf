@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvichi <lvichi@student.42porto.com>        +#+  +:+       +#+        */
+/*   By: skinners77 <lvichi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:05:10 by lvichi            #+#    #+#             */
-/*   Updated: 2023/10/16 21:24:39 by lvichi           ###   ########.fr       */
+/*   Updated: 2023/10/17 21:17:47 by skinners77       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,14 @@ int	main(void)
 {
 	int	i;
 	int	x;
+	//char *s = NULL;
+	//int z = -1;
+	//void *ptr = NULL;
+
 	
-	i = ft_printf("%c", '0');
+	i = ft_printf(" %x ", -100);
 	printf("\n");
-	x = printf("%c", '0');
+	x = printf(" %x ", -100);
 	printf("\n");
-	printf("ft_printf: %d\nprintf: %d\n\n", i, x);
+	printf("ft_printf: %d\nprintf: %d\n", i, x);
 }

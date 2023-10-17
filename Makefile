@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lvichi <lvichi@student.42porto.com>        +#+  +:+       +#+         #
+#    By: skinners77 <lvichi@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/05 21:17:31 by lvichi            #+#    #+#              #
-#    Updated: 2023/10/16 19:17:35 by lvichi           ###   ########.fr        #
+#    Updated: 2023/10/17 18:24:50 by skinners77       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ run: all
 	@./a.out
 
 clean:
-	@$(RM) $(OBJS) 
+	@$(RM) $(OBJS)
 
 fclean:
 	@$(RM) $(OBJS) $(NAME)
