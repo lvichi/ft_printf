@@ -6,12 +6,13 @@
 /*   By: skinners77 <lvichi@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 18:05:10 by lvichi            #+#    #+#             */
-/*   Updated: 2023/10/17 21:17:47 by skinners77       ###   ########.fr       */
+/*   Updated: 2023/10/17 22:52:46 by skinners77       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 /*int	main(void)
 {
@@ -42,9 +43,12 @@ int	main(void)
 	//void *ptr = NULL;
 
 	
-	i = ft_printf(" %x ", -100);
+	i = ft_printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
 	printf("\n");
-	x = printf(" %x ", -100);
+	x = printf(" %p %p ", ULONG_MAX, -ULONG_MAX);
 	printf("\n");
 	printf("ft_printf: %d\nprintf: %d\n", i, x);
+	printf("%llu\n%llu\n", ULONG_MAX, LLONG_MAX);
+
+
 }
